@@ -2,8 +2,8 @@ site:
   key: :cca
   subdomain: "mhc"
   domain_name: "hbxshop.org"
-  site_title: "Massachusetts Health Connector for Business"
-  home_url: "https://business.mahealthconnector.org/"
+  site_title: "Access Health Connecticut"
+  home_url: "https://www.accesshealthct.com/AHCT/LandingPageCTHIX"
   home_business_url: "https://www.mahealthconnector.org/business/"
   help_url: "https://www.mahealthconnector.org/business/help-center"
   faqs_url: "https://www.mahealthconnector.org/business/help-center/faqs"
@@ -13,17 +13,17 @@ site:
   policies_url: "https://www.mahealthconnector.org/about/policy-center/policies"
   invoice_bill_url: "https://ww2.e-billexpress.com/ebpp/maconnector/"
   payment_pdf_url: "https://www.mahealthconnector.org/help-center-answers/how-to-pay-your-premiums-online"
-  user_sign_in_url: "https://business.mahealthconnector.org/users/sign_in"
-  website_name: "MAhealthconnector.org"
-  main_web_address: "www.MAhealthconnector.org"
+  user_sign_in_url: "https://www.accesshealthct.com/AHCT/LandingPageCTHIX"
+  website_name: "https://www.accesshealthct.com/AHCT/LandingPageCTHIX"
+  main_web_address: "https://www.accesshealthct.com/AHCT/LandingPageCTHIX"
   health_care_website: "www.healthcare.gov"
   health_care_website_url: "https://www.healthcare.gov"
-  short_name: "Health Connector"
-  byline: "The Right Place for the Right Plan"
-  long_name: "Massachusetts Health Connector"
+  short_name: "Access Health Connecticut"
+  byline: "Connecticut's Official Health Insurance Marketplace"
+  long_name: "Access Health Connecticut"
   copyright_period_start: "2017"
-  header_message: "The Right Place for the Right Plan"
-  logo_file_name: "mhc_logo.svg"
+  header_message: "Connecticut's Official Health Insurance Marketplace"
+  logo_file_name: "logo_ct.png"
   make_their_premium_payments_online: "https://ww2.e-billexpress.com/ebpp/MAConnector/"
   tab_icon: 'favicon.ico'
   mailer_logo_file_name: "health_connector.png"
@@ -52,7 +52,7 @@ site:
   privacy_policy: "https://www.mahealthconnector.org/site-policies/privacy-policy"
   late_rates_message: "Due to a delay, premiums for some coverage effective dates are not available yet. Please check again soon to see if this information has been updated. You can also contact Customer Service or your broker if you need help."
 
-  exchange_name: "Massachusetts Health Connector"
+  exchange_name: "Access Health Connecticut"
   social_media:
     facebook_url: ""
 
@@ -67,8 +67,8 @@ contact_center:
   payment_phone_number: "1-888-813-9220"
   ivl_number: "1-877-623-6765"
   ivl_phone_number: "1-877-623-6765"
-  email_address: "smallbusiness@mahealthconnector.org"
-  small_business_email: "smallbusiness@MAhealthconnector.org"
+  email_address: "smallbusiness@accesshealthconnecticut.org"
+  small_business_email: "smallbusiness@accesshealthconnecticut.org"
   non_discrimination_email: "Nondiscrimination@state.ma.us"
 
   appeals: "connector-appeals@state.ma.us"
@@ -147,7 +147,7 @@ aca:
   address_query_county: true
   broker_routing_information: true
   recaptcha_enabled: false
-  security_questions: true
+  security_questions: false
   user_accounts_enabled: true
   plan_options_available: ["sole_source", "single_carrier", "metal_level"]
   dental_plan_options_available: ["single_plan"]
@@ -307,16 +307,16 @@ aptc_errors:
 #   ShopPlanYearPublishedDueDayOfMonth = ShopOpenEnrollmentBeginDueDayOfMonth
 
 style:
-  primary_orange: '#c56c24'
-  brand_primary: '#005e81'
-  primary_color: '#005e81'
-  primary_notification: '#c56c24'
-  primary_panel: '#c56c24'
-  primary_button: '#337ab7'
-  primary_button_color: '#286090'
-  primary_button_disabled: '#337ab7'
-  primary_button_border_disabled: '#2e6da4'
-  alternate_header_color: '#c56c24'
-  primary_icon_color: '#c56c24'
-  qle_header_color: '#c56c24'
+  primary_orange: '#F0592A'
+  brand_primary: '#F0592A'
+  primary_color: '#F0592A'
+  primary_notification: '#F0592A'
+  primary_panel: '#F0592A'
+  primary_button: '#F7B319'
+  primary_button_color: '#F7B319'
+  primary_button_disabled: '#F0592A'
+  primary_button_border_disabled: '#F0592A'
+  alternate_header_color: '#F0592A'
+  primary_icon_color: '#F0592A'
+  qle_header_color: '#F0592A'
   primary_header_font: "'Roboto Slab', serif"
