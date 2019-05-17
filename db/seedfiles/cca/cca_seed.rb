@@ -17,7 +17,7 @@ Mongoid::Migration.say_with_time("Load MA Benefit Markets") do
 end
 
 require File.expand_path(File.join(File.dirname(__FILE__), "locations_seed"))
-Mongoid::Migration.say_with_time("Load MA County Zips") do
+Mongoid::Migration.say_with_time("Load CT County Zips") do
   load_cca_locations_county_zips_seed
 end
 Mongoid::Migration.say_with_time("Load MA Rating Areas") do
