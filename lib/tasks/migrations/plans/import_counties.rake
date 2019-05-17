@@ -3,7 +3,7 @@ namespace :import do
 
     files = Rails.env.test? ? [args[:file]] : Dir.glob(File.join(Rails.root, "db/seedfiles/plan_xmls/#{Settings.aca.state_abbreviation.downcase}/xls_templates", "SHOP_ZipCode_CY2017_FINAL.xlsx"))
     count = 0
-    if Settings.aca.state_abbreviation.downcase == "ma"
+    if Settings.aca.state_abbreviation.downcase == "ct"
       files.each do |file|
         year = file.split("/")[-2].to_i
         puts "*"*80 unless Rails.env.test?
@@ -22,7 +22,7 @@ namespace :import do
             ::BenefitMarkets::Locations::CountyZip.find_or_create_by!({
               county_name: row_info[@headers["county"]].squish!,
               zip: row_info[@headers["zip"]].squish!,
-              state: "MA"
+              state: "CT"
             })
             count+=1
           end

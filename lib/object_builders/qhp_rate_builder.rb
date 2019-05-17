@@ -128,7 +128,7 @@ class QhpRateBuilder
   def build_product_premium_tables
     active_year = @rate[:effective_date].to_date.year
     applicable_range = @rate[:effective_date].to_date..@rate[:expiration_date].to_date
-    rating_area = Settings.aca.state_abbreviation.upcase == "MA" ? @rate[:rate_area_id].gsub("Rating Area ", "R-MA00") : nil
+    rating_area = Settings.aca.state_abbreviation.upcase == "CT" ? @rate[:rate_area_id].gsub("Rating Area ", "R-MA00") : nil
     rating_area_id = @rating_area_id_cache[[active_year, rating_area]]
     @premium_table_cache[[@rate[:plan_id], rating_area_id, applicable_range]][assign_age] = @rate[:primary_enrollee]
     @results_array << "#{@rate[:plan_id]},#{active_year}"
