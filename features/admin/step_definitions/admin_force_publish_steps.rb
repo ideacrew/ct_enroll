@@ -46,7 +46,7 @@ When(/^the user clicks submit button$/) do
 end
 
 Then(/^a warning message will appear$/) do
-  expect(find("#publishPlanYear .modal-body")).to have_content("As submitted, this application is ineligible for coverage under the DC Health Link exchange for reasons identified below. Click Cancel to go back and correct inaccurate information. If the information provided is accurate, you may click Publish to proceed. However, if you choose to proceed and the eligibility determination is deemed correct by DC Health Link officials, this organization may not again apply for coverage for 90 days, or until the reason for ineligibility changes, whichever is later.")
+  expect(find("#publishPlanYear .modal-body")).to have_content("As submitted, this application is ineligible for coverage under the Access Health CT exchange for reasons identified below. Click Cancel to go back and correct inaccurate information. If the information provided is accurate, you may click Publish to proceed. However, if you choose to proceed and the eligibility determination is deemed correct by Access Health CT officials, this organization may not again apply for coverage for 90 days, or until the reason for ineligibility changes, whichever is later.")
 end
 
 Then(/^the force publish successful message should be displayed$/) do
