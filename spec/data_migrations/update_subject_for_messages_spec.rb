@@ -22,13 +22,13 @@ describe UpdateSubjectForMessages, dbclean: :after_each do
       employer_profile.inbox.post_message(message)
       allow(ENV).to receive(:[]).with("fein").and_return organization.fein
       allow(ENV).to receive(:[]).with('incorrect_subject').and_return "Welcome to MA Health Link"
-      allow(ENV).to receive(:[]).with('correct_subject').and_return "Welcome to Health Connector"
+      allow(ENV).to receive(:[]).with('correct_subject').and_return "Welcome to Access Health"
     end
 
     it "should update subject" do
       subject.migrate
       employer_profile.inbox.messages.first.reload
-      expect(employer_profile.inbox.messages.first.subject).to eql ("Welcome to Health Connector")
+      expect(employer_profile.inbox.messages.first.subject).to eql ("Welcome to Access Health")
     end
   end
 end

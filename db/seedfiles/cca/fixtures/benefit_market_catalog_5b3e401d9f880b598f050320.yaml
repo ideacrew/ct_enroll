@@ -10,7 +10,7 @@ attributes: !ruby/hash:BSON::Document
   - :first_of_month
   - :first_of_month_after_30_days
   - :first_of_month_after_60_days
-  title: MA Health Connector SHOP Benefit Catalog
+  title: MA Access Health SHOP Benefit Catalog
   description: ''
   application_interval_kind: :monthly
   application_period: !ruby/hash:BSON::Document
@@ -8208,7 +8208,7 @@ attributes: !ruby/hash:BSON::Document
       network_information: |-
         This plan is provided on the "Direct" network which is a smaller network compared to the insurance carrier's "Standard Network" with access to fewer health care providers. Please confirm your PCPs and any other providers are covered in the network before selecting this plan.
 
-        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Health Connector." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
+        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Access Health." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
       sbc_document: !ruby/hash:BSON::Document
         _id: !ruby/object:BSON::ObjectId
           raw_data: !binary |-
@@ -8607,7 +8607,7 @@ attributes: !ruby/hash:BSON::Document
       network_information: |-
         This plan is provided on the "Direct" network which is a smaller network compared to the insurance carrier's "Standard Network" with access to fewer health care providers. Please confirm your PCPs and any other providers are covered in the network before selecting this plan.
 
-        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Health Connector." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
+        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Access Health." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
       sbc_document: !ruby/hash:BSON::Document
         _id: !ruby/object:BSON::ObjectId
           raw_data: !binary |-
@@ -9006,7 +9006,7 @@ attributes: !ruby/hash:BSON::Document
       network_information: |-
         This plan is provided on the "Direct" network which is a smaller network compared to the insurance carrier's "Standard Network" with access to fewer health care providers. Please confirm your PCPs and any other providers are covered in the network before selecting this plan.
 
-        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Health Connector." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
+        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Access Health." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
       sbc_document: !ruby/hash:BSON::Document
         _id: !ruby/object:BSON::ObjectId
           raw_data: !binary |-
@@ -9405,7 +9405,7 @@ attributes: !ruby/hash:BSON::Document
       network_information: |-
         This plan is provided on the "Direct" network which is a smaller network compared to the insurance carrier's "Standard Network" with access to fewer health care providers. Please confirm your PCPs and any other providers are covered in the network before selecting this plan.
 
-        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Health Connector." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
+        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Access Health." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
       sbc_document: !ruby/hash:BSON::Document
         _id: !ruby/object:BSON::ObjectId
           raw_data: !binary |-
@@ -9804,7 +9804,7 @@ attributes: !ruby/hash:BSON::Document
       network_information: |-
         This plan is provided on the "Direct" network which is a smaller network compared to the insurance carrier's "Standard Network" with access to fewer health care providers. Please confirm your PCPs and any other providers are covered in the network before selecting this plan.
 
-        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Health Connector." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
+        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Access Health." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
       sbc_document: !ruby/hash:BSON::Document
         _id: !ruby/object:BSON::ObjectId
           raw_data: !binary |-
@@ -19528,7 +19528,7 @@ attributes: !ruby/hash:BSON::Document
       network_information: |-
         This plan is provided on the "Direct" network which is a smaller network compared to the insurance carrier's "Standard Network" with access to fewer health care providers. Please confirm your PCPs and any other providers are covered in the network before selecting this plan.
 
-        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Health Connector." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
+        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Access Health." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
       sbc_document: !ruby/hash:BSON::Document
         _id: !ruby/object:BSON::ObjectId
           raw_data: !binary |-
@@ -19927,7 +19927,7 @@ attributes: !ruby/hash:BSON::Document
       network_information: |-
         This plan is provided on the "Direct" network which is a smaller network compared to the insurance carrier's "Standard Network" with access to fewer health care providers. Please confirm your PCPs and any other providers are covered in the network before selecting this plan.
 
-        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Health Connector." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
+        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Access Health." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
       sbc_document: !ruby/hash:BSON::Document
         _id: !ruby/object:BSON::ObjectId
           raw_data: !binary |-
@@ -20326,7 +20326,7 @@ attributes: !ruby/hash:BSON::Document
       network_information: |-
         This plan is provided on the "Direct" network which is a smaller network compared to the insurance carrier's "Standard Network" with access to fewer health care providers. Please confirm your PCPs and any other providers are covered in the network before selecting this plan.
 
-        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Health Connector." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
+        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Access Health." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
       sbc_document: !ruby/hash:BSON::Document
         _id: !ruby/object:BSON::ObjectId
           raw_data: !binary |-
@@ -20725,7 +20725,7 @@ attributes: !ruby/hash:BSON::Document
       network_information: |-
         This plan is provided on the "Direct" network which is a smaller network compared to the insurance carrier's "Standard Network" with access to fewer health care providers. Please confirm your PCPs and any other providers are covered in the network before selecting this plan.
 
-        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Health Connector." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
+        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Access Health." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
       sbc_document: !ruby/hash:BSON::Document
         _id: !ruby/object:BSON::ObjectId
           raw_data: !binary |-
@@ -33621,7 +33621,7 @@ attributes: !ruby/hash:BSON::Document
       network_information: |-
         This plan is provided on the "Direct" network which is a smaller network compared to the insurance carrier's "Standard Network" with access to fewer health care providers. Please confirm your PCPs and any other providers are covered in the network before selecting this plan.
 
-        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Health Connector." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
+        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Access Health." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
       sbc_document: !ruby/hash:BSON::Document
         _id: !ruby/object:BSON::ObjectId
           raw_data: !binary |-
@@ -34020,7 +34020,7 @@ attributes: !ruby/hash:BSON::Document
       network_information: |-
         This plan is provided on the "Direct" network which is a smaller network compared to the insurance carrier's "Standard Network" with access to fewer health care providers. Please confirm your PCPs and any other providers are covered in the network before selecting this plan.
 
-        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Health Connector." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
+        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Access Health." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
       sbc_document: !ruby/hash:BSON::Document
         _id: !ruby/object:BSON::ObjectId
           raw_data: !binary |-
@@ -34419,7 +34419,7 @@ attributes: !ruby/hash:BSON::Document
       network_information: |-
         This plan is provided on the "Direct" network which is a smaller network compared to the insurance carrier's "Standard Network" with access to fewer health care providers. Please confirm your PCPs and any other providers are covered in the network before selecting this plan.
 
-        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Health Connector." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
+        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Access Health." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
       sbc_document: !ruby/hash:BSON::Document
         _id: !ruby/object:BSON::ObjectId
           raw_data: !binary |-
@@ -34818,7 +34818,7 @@ attributes: !ruby/hash:BSON::Document
       network_information: |-
         This plan is provided on the "Direct" network which is a smaller network compared to the insurance carrier's "Standard Network" with access to fewer health care providers. Please confirm your PCPs and any other providers are covered in the network before selecting this plan.
 
-        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Health Connector." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
+        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Access Health." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
       sbc_document: !ruby/hash:BSON::Document
         _id: !ruby/object:BSON::ObjectId
           raw_data: !binary |-
@@ -35217,7 +35217,7 @@ attributes: !ruby/hash:BSON::Document
       network_information: |-
         This plan is provided on the "Direct" network which is a smaller network compared to the insurance carrier's "Standard Network" with access to fewer health care providers. Please confirm your PCPs and any other providers are covered in the network before selecting this plan.
 
-        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Health Connector." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
+        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Access Health." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
       sbc_document: !ruby/hash:BSON::Document
         _id: !ruby/object:BSON::ObjectId
           raw_data: !binary |-
@@ -35614,7 +35614,7 @@ attributes: !ruby/hash:BSON::Document
       network_information: |-
         This plan is provided on the "Direct" network which is a smaller network compared to the insurance carrier's "Standard Network" with access to fewer health care providers. Please confirm your PCPs and any other providers are covered in the network before selecting this plan.
 
-        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Health Connector." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
+        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Access Health." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
       sbc_document: !ruby/hash:BSON::Document
         _id: !ruby/object:BSON::ObjectId
           raw_data: !binary |-
@@ -36011,7 +36011,7 @@ attributes: !ruby/hash:BSON::Document
       network_information: |-
         This plan is provided on the "Direct" network which is a smaller network compared to the insurance carrier's "Standard Network" with access to fewer health care providers. Please confirm your PCPs and any other providers are covered in the network before selecting this plan.
 
-        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Health Connector." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
+        The carrier describes this network as "a focused-network alternative to the Tufts Health Plan - Standard Network that is comparable to the provider networks of other lower-cost health plans offered on the Access Health." The health plan offering this product was previously known as Tufts Health Plan - Network Health.
       sbc_document: !ruby/hash:BSON::Document
         _id: !ruby/object:BSON::ObjectId
           raw_data: !binary |-

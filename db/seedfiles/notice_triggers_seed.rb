@@ -260,7 +260,7 @@ if Settings.aca.state_abbreviation == "MA"
       # {
       #     hbx_id: 'SHOP_M003',
       #     title: 'Employer Denial Notice',
-      #     description: 'Application to Offer Group Health Coverage in Health Connector',
+      #     description: 'Application to Offer Group Health Coverage in Access Health',
       #     resource_name: 'employer',
       #     event_name: 'initial_employer_denial',
       #     notice_triggers: [
@@ -539,7 +539,7 @@ if Settings.aca.state_abbreviation == "MA"
 
     # {
     #     hbx_id: 'SHOP42',
-    #     title: 'Termination of Employer’s Health Coverage Offered Through The Health Connector',
+    #     title: 'Termination of Employer’s Health Coverage Offered Through The Access Health',
     #     description: 'When an employer request termination at least 30 days in advance, all employees active on their roster will receive this notice to provide confirmation of the request and the coverage end date for their groups termination of coverage.',
     #     resource_name: 'employee_role',
     #     event_name: 'notify_employee_when_employer_requests_advance_termination',
@@ -1003,7 +1003,7 @@ if Settings.aca.state_abbreviation == "MA"
       # },
       # {
       #     hbx_id: 'SHOP59',
-      #     title: 'Termination of Employer’s Health Coverage Offered Through The Health Connector',
+      #     title: 'Termination of Employer’s Health Coverage Offered Through The Access Health',
       #     description: 'When an initial group misses the binder payment deadline this notice is sent to employees to let them know the group will not be offering coverage',
       #     resource_name: 'employee_role',
       #     event_name: 'ee_ers_plan_year_will_not_be_written_notice',

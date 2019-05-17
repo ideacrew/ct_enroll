@@ -9,7 +9,7 @@ FactoryGirl.define do
       address { FactoryGirl.build(:benefit_sponsors_locations_address, kind: "primary") }
     end
 
-    trait :with_massachusetts_address do
+    trait :with_Connecticut_address do
       is_primary true
       address { FactoryGirl.build(:benefit_sponsors_locations_address, :cca_shop_baseline) }
       phone   { FactoryGirl.build(:benefit_sponsors_locations_phone,

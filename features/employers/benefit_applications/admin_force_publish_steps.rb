@@ -58,7 +58,7 @@ And (/^(.*?) primary address state (is|is not) MA$/) do |employer, compare|
 end
 
 Then(/^a warning message will appear$/) do
-  expect(find("#submitBenefitApplication .modal-body")).to have_content("If you submit this application as is, the small business application may be ineligible for coverage through the Health Connector because it does not meet the eligibility reason(s) identified below:")
+  expect(find("#submitBenefitApplication .modal-body")).to have_content("If you submit this application as is, the small business application may be ineligible for coverage through the Access Health because it does not meet the eligibility reason(s) identified below:")
 end
 
 And(/^ask to confirm intention to publish$/) do

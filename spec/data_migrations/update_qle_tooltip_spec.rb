@@ -13,14 +13,14 @@ describe UpdateQleTooltip, dbclean: :after_each do
     let(:qle){ FactoryGirl.create(:qualifying_life_event_kind, :title => "Entered into a legal domestic partnership", :tool_tip =>'Entering a domestic partnership as permitted or recognized by the District of Columbia') }
     before(:each) do
       allow(ENV).to receive(:[]).with('title').and_return("Entered into a legal domestic partnership")
-      allow(ENV).to receive(:[]).with('text').and_return("Entering a domestic partnership as permitted or recognized by Massachusetts")
+      allow(ENV).to receive(:[]).with('text').and_return("Entering a domestic partnership as permitted or recognized by Connecticut")
     end
     
     it "should update tooltip" do
       expect(qle.tool_tip).to eq "Entering a domestic partnership as permitted or recognized by the District of Columbia"
       subject.migrate
       qle.reload
-      expect(qle.tool_tip).to eq "Entering a domestic partnership as permitted or recognized by Massachusetts"
+      expect(qle.tool_tip).to eq "Entering a domestic partnership as permitted or recognized by Connecticut"
     end
   end
 end

@@ -632,7 +632,7 @@ module BenefitSponsors
           min: effective_period.min,
           max: effective_period.max
         },
-        title: "MA Health Connector SHOP Benefit Catalog",
+        title: "MA Access Health SHOP Benefit Catalog",
         benefit_market_id: benefit_market._id,
         product_packages: [
          sole_source_health_product_package_from_product_props(product_list, effective_period),
@@ -685,7 +685,7 @@ module BenefitSponsors
           min: renewal_effective_period.min,
           max: renewal_effective_period.max
         },
-        title: "MA Health Connector SHOP Benefit Catalog",
+        title: "MA Access Health SHOP Benefit Catalog",
         benefit_market_id: benefit_market._id,
         product_packages: [
          sole_source_health_product_package_from_product_props(renewal_product_list, renewal_effective_period),
@@ -732,7 +732,7 @@ module BenefitSponsors
           min: effective_period.min,
           max: effective_period.max
         },
-        title: "MA Health Connector SHOP Benefit Catalog",
+        title: "MA Access Health SHOP Benefit Catalog",
         benefit_market_id: benefit_market._id,
         product_packages: [
          sole_source_health_product_package_from_product_props(product_list, effective_period),
@@ -787,7 +787,7 @@ module BenefitSponsors
           min: renewal_effective_period.min,
           max: renewal_effective_period.max
         },
-        title: "MA Health Connector SHOP Benefit Catalog",
+        title: "MA Access Health SHOP Benefit Catalog",
         benefit_market_id: benefit_market._id,
         product_packages: [
          sole_source_health_product_package_from_product_props(renewal_product_list, renewal_effective_period),
@@ -834,7 +834,7 @@ module BenefitSponsors
           min: effective_period.min,
           max: effective_period.max
         },
-        title: "MA Health Connector SHOP Benefit Catalog",
+        title: "MA Access Health SHOP Benefit Catalog",
         benefit_market_id: benefit_market._id,
         product_packages: [
          sole_source_health_product_package_from_product_props(product_list, effective_period),
@@ -885,7 +885,7 @@ module BenefitSponsors
           min: previous_effective_period.min,
           max: previous_effective_period.max
         },
-        title: "MA Health Connector SHOP Benefit Catalog",
+        title: "MA Access Health SHOP Benefit Catalog",
         benefit_market_id: benefit_market._id,
         product_packages: [
          sole_source_health_product_package_from_product_props(previous_product_list, previous_effective_period),

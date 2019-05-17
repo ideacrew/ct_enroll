@@ -57,8 +57,8 @@ site:
     facebook_url: ""
 
 contact_center:
-  name: "Health Connector's Customer Care Center"
-  alt_name: "Health Connector Customer Service"
+  name: "Access Health's Customer Care Center"
+  alt_name: "Access Health Customer Service"
   phone_number: "1-888-813-9220"
   fax: "1-617-933-3099"
   alt_fax: "617-722-4033"
@@ -132,7 +132,7 @@ invoices:
   addendum: 'ma_non_discrimination_and_language_tags.pdf'
 
 aca:
-  state_name: "Massachusetts"
+  state_name: "Connecticut"
   state_abbreviation: "MA"
   market_kinds: ["shop"]
   hbx_abbreviation: "DC Health Benefit Exchange"
@@ -189,7 +189,7 @@ aca:
     binder_payment_due_on: 23
     small_market_active_employee_limit: 200
     new_employee_paper_application: true
-    census_employees_template_file: 'Health Connector - Employee Census Template'
+    census_employees_template_file: 'Access Health - Employee Census Template'
     coverage_start_period: "2 months"
 
     earliest_enroll_prior_to_effective_on:

@@ -16,9 +16,9 @@ site:
   main_web_address: "www.MAhealthconnector.org"
   health_care_website: "www.healthcare.gov"
   health_care_website_url: "https://www.healthcare.gov"
-  short_name: "Health Connector"
+  short_name: "Access Health Connecticut"
   byline: "The Right Place for the Right Plan"
-  long_name: "Massachusetts Health Connector"
+  long_name: "Access Health Connecticut"
   copyright_period_start: "2017"
   header_message: "The Right Place for the Right Plan"
   logo_file_name: "mhc_logo.svg"
@@ -48,13 +48,13 @@ site:
   privacy_policy: "https://www.mahealthconnector.org/site-policies/privacy-policy"
   late_rates_message: "Premiums for some coverage effective dates are not yet available. Premiums are typically ready for employers at least 30 days before your coverage starts, and often sooner than that. Please check back again soon to see if premium rates are available, or call customer service if you need more additional assistance."
 
-  exchange_name: "Massachusetts Health Connector"
+  exchange_name: "Connecticut Access Health"
   social_media:
     facebook_url: ""
 
 contact_center:
-  name: "Health Connector's Customer Care Center"
-  alt_name: "Health Connector Customer Service"
+  name: "Access Health's Customer Care Center"
+  alt_name: "Access Health Customer Service"
   phone_number: "1-888-813-9220"
   fax: "1-617-933-3099"
   alt_fax: "617-722-4033"
@@ -119,7 +119,7 @@ invoices:
   addendum: 'ma_non_discrimination_and_language_tags.pdf'
 
 aca:
-  state_name: "Massachusetts"
+  state_name: "Connecticut"
   state_abbreviation: "MA"
   market_kinds: ["shop"]
   hbx_abbreviation: "DC Health Benefit Exchange"
@@ -175,7 +175,7 @@ aca:
     binder_payment_due_on: 23
     small_market_active_employee_limit: 200
     new_employee_paper_application: true
-    census_employees_template_file: 'Health Connector - Employee Census Template'
+    census_employees_template_file: 'Access Health - Employee Census Template'
     coverage_start_period: "2 months"
 
     earliest_enroll_prior_to_effective_on:

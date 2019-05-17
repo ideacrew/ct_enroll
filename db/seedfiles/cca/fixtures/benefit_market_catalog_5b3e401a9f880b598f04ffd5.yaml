@@ -10,7 +10,7 @@ attributes: !ruby/hash:BSON::Document
   - :first_of_month
   - :first_of_month_after_30_days
   - :first_of_month_after_60_days
-  title: MA Health Connector SHOP Benefit Catalog
+  title: MA Access Health SHOP Benefit Catalog
   description: ''
   application_interval_kind: :monthly
   application_period: !ruby/hash:BSON::Document
