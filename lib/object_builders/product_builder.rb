@@ -102,6 +102,7 @@ class ProductBuilder
           {
             health_plan_kind: @qhp.plan_type.downcase,
             ehb: @qhp.ehb_percent_premium.present? ? @qhp.ehb_percent_premium : 1.0
+            product_package_kinds: [:single_product, :single_issuer, :metal_level]
           }
         else
           {

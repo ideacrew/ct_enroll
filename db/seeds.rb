@@ -135,8 +135,8 @@ if (ENV["type"] != "fixtures") && missing_plan_dumps
   puts "Loading Contribution and Pricing models done"
 
   puts "*"*80
-  system "bundle exec rake load:benefit_market_catalog[2018]"
   system "bundle exec rake load:benefit_market_catalog[2019]"
+  system "bundle exec rake load:benefit_market_catalog[2020]"
   puts "::: complete :::"
   puts "*"*80
 
