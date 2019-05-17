@@ -7,6 +7,9 @@ gem "notifier",           path: "components/notifier"
 # Use CoffeeScript for .coffee assets and views
 
 gem 'aasm', '~> 4.8.0'
+
+
+gem 'rbnacl', '>= 3.2', '< 5.0'
 gem 'acapi', git: 'https://github.com/dchbx/acapi.git', branch: '1.3.2'
 gem 'addressable', '2.3.8'
 gem 'animate-rails', '~> 1.0.7'
