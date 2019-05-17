@@ -4,6 +4,6 @@ attributes: !ruby/hash:BSON::Document
   _id: !ruby/object:BSON::ObjectId
     raw_data: !binary |-
       WxWP4PDRxOS0MggA
-  zip: '01366'
-  county_name: Franklin
-  state: MA
+  zip: '09009'
+  county_name: New Haven
+  state: CT

@@ -4,6 +4,6 @@ attributes: !ruby/hash:BSON::Document
   _id: !ruby/object:BSON::ObjectId
     raw_data: !binary |-
       WxWP4PDRxOS0Mgf9
-  zip: '01026'
-  county_name: Berkshire
-  state: MA
+  zip: '09003'
+  county_name: Hartford
+  state: CT

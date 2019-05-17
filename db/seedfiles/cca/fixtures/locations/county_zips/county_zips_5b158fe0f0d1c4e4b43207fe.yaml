@@ -4,6 +4,6 @@ attributes: !ruby/hash:BSON::Document
   _id: !ruby/object:BSON::ObjectId
     raw_data: !binary |-
       WxWP4PDRxOS0Mgf+
-  zip: '01517'
-  county_name: Worcester
-  state: MA
+  zip: '09005'
+  county_name: Litchfield
+  state: CT
