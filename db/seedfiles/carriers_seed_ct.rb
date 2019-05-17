@@ -1,5 +1,5 @@
 puts "*"*80
-puts "::: Generating MA Carriers:::"
+puts "::: Generating CT Carriers:::"
 
 hbx_office = OfficeLocation.new(
     is_primary: true,
@@ -13,5 +13,5 @@ cp = org.create_carrier_profile(id: "53e67210eb89914603000029", abbrev: "ABCBS",
 org = Organization.new(fein: "237442369", legal_name: "ConnectiCare", office_locations: [hbx_office])
 cp = org.create_carrier_profile(id: "53e67210eb89914603000022", abbrev: "CCARE", hbx_carrier_id: 20015, ivl_health: false, ivl_dental: false, shop_health: true, shop_dental: false, issuer_hios_ids: ['76962'], offers_sole_source: true)
 
-puts "::: Generated MA Carriers :::"
+puts "::: Generated CT Carriers :::"
 puts "*"*80

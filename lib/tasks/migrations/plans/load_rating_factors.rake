@@ -217,6 +217,8 @@ namespace :load_rating_factors do
       return 12
     when 2019
       return 12
+    when 2020
+      return 12
     end
   end
 

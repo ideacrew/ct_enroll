@@ -86,12 +86,12 @@ if (ENV["type"] != "fixtures") && missing_plan_dumps
   system "bundle exec rake migrations:load_issuer_profiles"
   puts "::: complete :::"
 
-  unless Settings.aca.use_simple_employer_calculation_model
-    puts "*"*80
-    puts "Importing Rating Factors."
-    system "bundle exec rake load_rating_factors:run_all_rating_factors"
-    puts "::: complete :::"
-  end
+  # unless Settings.aca.use_simple_employer_calculation_model
+  #   puts "*"*80
+  #   puts "Importing Rating Factors."
+  #   system "bundle exec rake load_rating_factors:run_all_rating_factors"
+  #   puts "::: complete :::"
+  # end
 
   if Settings.aca.offerings_constrained_to_service_areas
     puts "*"*80
