@@ -61,8 +61,6 @@ class QualifyingLifeEventKind
   ]
 
   field :event_kind_label, type: String
-  field :action_kind, type: String
-
   field :title, type: String
   field :action_kind, type: String
   field :effective_on_kinds, type: Array, default: []
@@ -182,7 +180,7 @@ class QualifyingLifeEventKind
 
   class << self
     def shop_market_events
-      where(:market_kind => "shop").and(:is_self_attested.ne => false).active.to_a
+      where(:market_kind => "shop").and(:is_self_attested => true).active.to_a
     end
 
     def individual_market_events

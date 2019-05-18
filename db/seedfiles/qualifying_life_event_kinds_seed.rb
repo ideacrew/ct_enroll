@@ -3,8 +3,23 @@ puts "::: Cleaning QualifyingLifeEventKinds :::"
 QualifyingLifeEventKind.delete_all
 
 QualifyingLifeEventKind.create!(
+    title: "Losing other health insurance", 
+    action_kind: "add_benefit",
+    reason: "lost_access_to_mec",
+    edi_code: "33-LOST ACCESS TO MEC", 
+    market_kind: "shop", 
+    effective_on_kinds: ["first_of_next_month"],
+    pre_event_sep_in_days: 0,
+    post_event_sep_in_days: 30, 
+    is_self_attested: true, 
+    date_options_available: false,
+    ordinal_position: 10,
+    event_kind_label: 'Date of losing coverage',
+    tool_tip: "Someone in the household is losing other health insurance involuntarily"
+  )
+
+QualifyingLifeEventKind.create!(
     title: "Had a baby",
-    tool_tip: "Household adds a member due to marriage, birth, adoption, placement for adoption, or placement in foster care",
     action_kind: "add_benefit",
     reason: "birth",
     edi_code: "02-BIRTH", 
@@ -14,8 +29,9 @@ QualifyingLifeEventKind.create!(
     post_event_sep_in_days: 30, 
     is_self_attested: true, 
     date_options_available: false,
-    ordinal_position: 25,
-    event_kind_label: 'Date of birth'
+    ordinal_position: 15,
+    event_kind_label: 'Date of birth',
+    tool_tip: "Enroll or add a family member due to birth"
   )
 
 QualifyingLifeEventKind.create!(
@@ -29,7 +45,7 @@ QualifyingLifeEventKind.create!(
     post_event_sep_in_days: 30, 
     is_self_attested: true, 
     date_options_available: false,
-    ordinal_position: 30,
+    ordinal_position: 20,
     event_kind_label: "Date of adoption",
     tool_tip: "Enroll or add a family member due to adoption"
   )
@@ -45,64 +61,63 @@ QualifyingLifeEventKind.create!(
     post_event_sep_in_days: 30, 
     is_self_attested: true, 
     date_options_available: false,
-    ordinal_position: 15,
+    ordinal_position: 25,
     event_kind_label: 'Date of married',
     tool_tip: "Enroll or add a family member because of marriage"
   )
 
 QualifyingLifeEventKind.create!(
-    title: "Entered into a legal domestic partnership",
-    tool_tip: "Entering a domestic partnership as permitted or recognized by the #{aca_state_name}",
-    action_kind: "add_benefit",
-    reason: "domestic_partnership",
-    edi_code: "33-ENTERING DOMESTIC PARTNERSHIP", 
+    title: "Error occured at the exchange", 
+    action_kind: "administrative",
+    reason: "enrollment_error_or_misconduct_hbx",
+    edi_code: "MISCONDUCT AT HBX",
     market_kind: "shop", 
     effective_on_kinds: ["first_of_next_month"],
     pre_event_sep_in_days: 0,
     post_event_sep_in_days: 30, 
-    is_self_attested: true, 
+    is_self_attested: false, 
     date_options_available: false,
-    ordinal_position: 20,
-    event_kind_label: 'Date of domestic partnership'
+    ordinal_position: 30,
+    tool_tip: "You are not enrolled or are enrolled in the wrong plan because of an officer, employee, or agent of the Exchange of HHS."
   )
 
 QualifyingLifeEventKind.create!(
-    title: "Divorced", 
-    tool_tip: "Divorced, ended a domestic partnership, or legally separated",
-    action_kind: "drop_member",
-    reason: "divorce",
-    edi_code: "01-DIVORCE", 
+    title: "Health plan contract violation", 
+    action_kind: "administrative",
+    reason: "contract_violation",
+    edi_code: "33-CONTRACT VIOLATION",
     market_kind: "shop", 
     effective_on_kinds: ["first_of_next_month"],
     pre_event_sep_in_days: 0,
     post_event_sep_in_days: 30, 
+    is_self_attested: false, 
+    date_options_available: true,
+    ordinal_position: 35,
+    event_kind_label: "Date of contract violation",
+    tool_tip: "Enroll due to contract violation"
+  )
+
+QualifyingLifeEventKind.create!(
+    title: "Moved or moving",
+    action_kind: "add_benefit",
+    reason: "relocate",
+    edi_code: "43-CHANGE OF LOCATION", 
+    market_kind: "shop", 
+    effective_on_kinds: ["first_of_next_month"],
+    pre_event_sep_in_days: 0,
+    post_event_sep_in_days: 30,
     is_self_attested: true, 
     date_options_available: false,
     ordinal_position: 40,
-    event_kind_label: "Divorce or partnership end date"
+    event_kind_label: "Date of move", 
+    tool_tip: "A qualified individual or enrollee gains access to new QHPs as a result of a permanent move"
   )
 
 QualifyingLifeEventKind.create!(
-    title: "Losing other health insurance", 
+    title: "I'm a Native American", 
     action_kind: "add_benefit",
-    reason: "lost_access_to_mec",
-    edi_code: "33-LOST ACCESS TO MEC", 
-    market_kind: "shop", 
-    effective_on_kinds: ["first_of_next_month"],
-    pre_event_sep_in_days: 0,
-    post_event_sep_in_days: 30, 
-    is_self_attested: true, 
-    date_options_available: false,
-    ordinal_position: 35,
-    event_kind_label: 'Date of losing coverage',
-    tool_tip: "Someone in the household is losing other health insurance involuntarily",
-  )
-
-QualifyingLifeEventKind.create!(
-    title: "A family member has died", 
-    action_kind: "drop_member",
-    reason: "death",
-    edi_code: "03-DEATH", 
+    reason: "qualified_native_american",
+    edi_code: "NATIVE AMERICAN", 
     market_kind: "shop", 
     effective_on_kinds: ["first_of_next_month"],
     pre_event_sep_in_days: 0,
@@ -110,72 +125,8 @@ QualifyingLifeEventKind.create!(
     is_self_attested: true, 
     date_options_available: false,
     ordinal_position: 45,
-    event_kind_label: "Date of death",
-    tool_tip: "Remove a family member due to death"
-  )
-
-QualifyingLifeEventKind.create!(
-    title: "Child losing or lost coverage due to age", 
-    action_kind: "drop_member",
-    reason: "child_age_off",
-    edi_code: "33-CHILD AGE OFF", 
-    market_kind: "shop", 
-    effective_on_kinds: ["first_of_next_month"],
-    pre_event_sep_in_days: 0,
-    post_event_sep_in_days: 30, 
-    is_self_attested: true, 
-    date_options_available: false,
-    ordinal_position: 50,
-    event_kind_label: "Date of coverage loss",
-    tool_tip: "Remove a child who is no longer eligible due to turning age 26"
-  )
-
-QualifyingLifeEventKind.create!(
-    title: "Drop coverage due to new eligibility", 
-    action_kind: "drop_member",
-    reason: "new_eligibility_family",
-    edi_code: "07-TERMINATION OF BENEFITS", 
-    market_kind: "shop", 
-    effective_on_kinds: ["first_of_next_month"],
-    pre_event_sep_in_days: 0,
-    post_event_sep_in_days: 30, 
-    is_self_attested: true, 
-    date_options_available: false,
-    ordinal_position: 55,
-    event_kind_label: "Date of new eligibility", 
-    tool_tip: "Drop coverage for myself or family member due to new eligibility for other coverage"
-  )
-
-QualifyingLifeEventKind.create!(
-    title: "Drop family member due to new eligibility", 
-    action_kind: "drop_member",
-    reason: "new_eligibility_member",
-    edi_code: "07-TERMINATION OF BENEFITS", 
-    market_kind: "shop", 
-    effective_on_kinds: ["first_of_next_month"],
-    pre_event_sep_in_days: 0,
-    post_event_sep_in_days: 30, 
-    is_self_attested: true, 
-    date_options_available: false,
-    ordinal_position: 60,
-    event_kind_label: "Date of new eligibility", 
-    tool_tip: "Drop coverage for a family member due to their new eligibility for other coverage"
-  )
-
-QualifyingLifeEventKind.create!(
-    title: "Moved or moving",
-    action_kind: "administrative",
-    reason: "relocate",
-    edi_code: "43-CHANGE OF LOCATION", 
-    market_kind: "shop", 
-    effective_on_kinds: ["first_of_next_month"],
-    pre_event_sep_in_days: 0,
-    post_event_sep_in_days: 30, 
-    is_self_attested: false, 
-    date_options_available: false,
-    ordinal_position: 65,
-    event_kind_label: "Date of move", 
-    tool_tip: "Drop coverage due to a permanent move outside of my current plan's service area"
+    event_kind_label: "native american",
+    tool_tip: "Native American or Alaskan Native"
   )
 
 QualifyingLifeEventKind.create!(
@@ -189,58 +140,45 @@ QualifyingLifeEventKind.create!(
     post_event_sep_in_days: 30, 
     is_self_attested: false, 
     date_options_available: false,
-    ordinal_position: 70,
+    ordinal_position: 50,
     event_kind_label: "Date of exceptional circumstances",
     tool_tip: "Enroll due to an inadvertent or erroneous enrollment or another exceptional circumstance"
   )
 
-QualifyingLifeEventKind.create!(
-    title: "Health plan contract violation", 
-    action_kind: "administrative",
-    reason: "contract_violation",
-    edi_code: "33-CONTRACT VIOLATION", 
-    market_kind: "shop", 
-    effective_on_kinds: ["first_of_next_month"],
-    pre_event_sep_in_days: 0,
-    post_event_sep_in_days: 30, 
-    is_self_attested: false, 
-    date_options_available: true,
-    ordinal_position: 75,
-    event_kind_label: "Date of contract violation",
-    tool_tip: "Enroll due to contract violation"
-  )
 
 QualifyingLifeEventKind.create!(
-    title: "Started a new job", 
+    title: "Got my Medicaid denial after open enrollment ended",
     action_kind: "add_benefit",
-    reason: "new_employment",
-    edi_code: "28-INITIAL ENROLLMENT", 
+    reason: "eligibility_change_medicaid_ineligible",
+    edi_code: "MEDICAID DENIAL",
     market_kind: "shop", 
     effective_on_kinds: ["first_of_next_month"],
     pre_event_sep_in_days: 0,
-    post_event_sep_in_days: 30, 
+    post_event_sep_in_days: 60, 
     is_self_attested: true, 
     date_options_available: false,
-    ordinal_position: 10,
-    event_kind_label: 'Date of start a new job',
-    tool_tip: "Enroll due to becoming newly eligibile"
-  )
+    ordinal_position: 55,
+    event_kind_label: "Date of medicaid denial",
+    tool_tip: "Household member(s) had pending Medicaid eligibility at the end of open enrollment but ineligible determination received after open enrollment ended."
+)
+
 
 QualifyingLifeEventKind.create!(
-    title: "Court order to provide coverage for someone",
-    tool_tip: "",
-    action_kind: "add_member",
+    title: "Changed eligibility for Assistance", 
+    action_kind: "add_benefit",
+    reason: "eligibility_change_assistance_eligible",
+    edi_code: "CHANGE IN ASSISTANCE",
     market_kind: "shop",
-    event_kind_label: "Date that court orders that coverage starts",
-    ordinal_position: 100,
-    reason: "court_order",
-    edi_code: " ",
-    effective_on_kinds: ["exact_date"],
+    effective_on_kinds: ["first_of_next_month"],
     pre_event_sep_in_days: 0,
-    post_event_sep_in_days: 60,
-    is_self_attested: false,
+    post_event_sep_in_days: 60, 
+    is_self_attested: true, 
     date_options_available: false,
+    ordinal_position: 60,
+    event_kind_label: "Date of assistance eligibility",
+    tool_tip: "Becomes eligible for assistance, with respect to coverage under a Access health CT Small Business, under such Medicaid plan or a State child health plan" 
 )
+
 
 puts "::: QualifyingLifeEventKinds Complete :::"
 puts "*"*80
