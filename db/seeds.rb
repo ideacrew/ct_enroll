@@ -186,7 +186,8 @@ puts "::: complete :::"
 
 puts "*"*80
 puts "Loading counties, admins, people, broker agencies, employers, and employees"
-require File.join(File.dirname(__FILE__),'seedfiles', 'us_counties_seed')
+system "bundle exec rake import:county_zips"
+#require File.join(File.dirname(__FILE__),'seedfiles', 'us_counties_seed')
 require File.join(File.dirname(__FILE__),'seedfiles', 'admins_seed')
 require File.join(File.dirname(__FILE__),'seedfiles', 'people_seed')
 require File.join(File.dirname(__FILE__),'seedfiles', 'broker_agencies_seed')

@@ -1,0 +1,11 @@
+--- !ruby/object:BenefitMarkets::Locations::CountyZip
+__selected_fields: 
+attributes: !ruby/hash:BSON::Document
+  _id: !ruby/object:BSON::ObjectId
+    raw_data: !binary |-
+      XN9R5W6B2RAovOHd
+  zip: '06442'
+  county_name: Middlesex
+  state: CT
+  updated_at: 2019-05-18 00:29:25.126000000 Z
+  created_at: 2019-05-18 00:29:25.126000000 Z

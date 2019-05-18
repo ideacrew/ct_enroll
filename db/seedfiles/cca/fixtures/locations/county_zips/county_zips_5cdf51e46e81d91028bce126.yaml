@@ -1,0 +1,11 @@
+--- !ruby/object:BenefitMarkets::Locations::CountyZip
+__selected_fields: 
+attributes: !ruby/hash:BSON::Document
+  _id: !ruby/object:BSON::ObjectId
+    raw_data: !binary |-
+      XN9R5G6B2RAovOEm
+  zip: '06072'
+  county_name: Tolland
+  state: CT
+  updated_at: 2019-05-18 00:29:24.527000000 Z
+  created_at: 2019-05-18 00:29:24.527000000 Z

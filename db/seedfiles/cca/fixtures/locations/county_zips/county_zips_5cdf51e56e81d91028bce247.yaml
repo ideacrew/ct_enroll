@@ -1,0 +1,11 @@
+--- !ruby/object:BenefitMarkets::Locations::CountyZip
+__selected_fields: 
+attributes: !ruby/hash:BSON::Document
+  _id: !ruby/object:BSON::ObjectId
+    raw_data: !binary |-
+      XN9R5W6B2RAovOJH
+  zip: '06750'
+  county_name: Litchfield
+  state: CT
+  updated_at: 2019-05-18 00:29:25.713000000 Z
+  created_at: 2019-05-18 00:29:25.713000000 Z
