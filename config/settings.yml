@@ -309,7 +309,7 @@ aptc_errors:
 
 style:
   primary_orange: '#F0592A'
-  brand_primary: '#F0592A'
+  brand_primary: '#005e81'
   primary_color: '#F0592A'
   primary_notification: '#F0592A'
   primary_panel: '#F0592A'

@@ -186,7 +186,8 @@ puts "::: complete :::"
 
 puts "*"*80
 puts "Loading counties, admins, people, broker agencies, employers, and employees"
-require File.join(File.dirname(__FILE__),'seedfiles', 'us_counties_seed')
+# system "bundle exec rake import:county_zips"
+#require File.join(File.dirname(__FILE__),'seedfiles', 'us_counties_seed')
 require File.join(File.dirname(__FILE__),'seedfiles', 'admins_seed')
 require File.join(File.dirname(__FILE__),'seedfiles', 'people_seed')
 require File.join(File.dirname(__FILE__),'seedfiles', 'broker_agencies_seed')
@@ -221,5 +222,6 @@ puts "*"*80
 puts "Creating Indexes"
 system "rake db:mongoid:create_indexes"
 puts "::: complete :::"
-
+puts "Fixing admin permissions"
+User.where(email:"admin@dc.gov").first.person.hbx_staff_role.update_attributes( permission_id:Permission.where(name:"hbx_staff").first.id)
 puts "End of Seed Data"
