@@ -166,7 +166,7 @@ QualifyingLifeEventKind.create!(
 QualifyingLifeEventKind.create!(
     title: "Changed eligibility for Assistance", 
     action_kind: "add_benefit",
-    reason: "eligibility_change_assistance_eligible",
+    reason: "eligibility_change_income",
     edi_code: "CHANGE IN ASSISTANCE",
     market_kind: "shop",
     effective_on_kinds: ["first_of_next_month"],
