@@ -222,5 +222,6 @@ puts "*"*80
 puts "Creating Indexes"
 system "rake db:mongoid:create_indexes"
 puts "::: complete :::"
-
+puts "Fixing admin permissions"
+User.where(email:"admin@dc.gov").first.person.hbx_staff_role.update_attributes( permission_id:Permission.where(name:"hbx_staff").first.id)
 puts "End of Seed Data"
