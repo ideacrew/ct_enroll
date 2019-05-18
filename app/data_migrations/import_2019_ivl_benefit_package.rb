@@ -7,29 +7,29 @@ class Import2019IvlBenefitPackage < MongoidMigrationTask
     hbx = HbxProfile.current_hbx
 
     # Second lowest cost silver plan
-    slcsp_2019 = Plan.where(active_year: 2019).and(hios_id: "94506DC0390006-01").first
+    # slcsp_2019 = Plan.where(active_year: 2019).and(hios_id: "94506DC0390006-01").first
 
     # check if benefit package is present for 2019
     bc_period_2019 = hbx.benefit_sponsorship.benefit_coverage_periods.select { |bcp| bcp.start_on.year == 2019 }.first
 
     if bc_period_2019.present?
-      bc_period_2019.slcsp = slcsp_2019.id
-      bc_period_2019.slcsp_id = slcsp_2019.id
+      # bc_period_2019.slcsp = slcsp_2019.id
+      # bc_period_2019.slcsp_id = slcsp_2019.id
     else
     # create benefit package and benefit_coverage_period for 2019
-      bc_period_2018 = hbx.benefit_sponsorship.benefit_coverage_periods.select { |bcp| bcp.start_on.year == 2018 }.first
+      bc_period_2018 = hbx.benefit_sponsorship.benefit_coverage_periods.select { |bcp| bcp.start_on.year == 2016 }.first
       bc_period_2019 = bc_period_2018.clone
       bc_period_2019.title = "Individual Market Benefits 2019"
-      bc_period_2019.start_on = bc_period_2018.start_on + 1.year
-      bc_period_2019.end_on = bc_period_2018.end_on + 1.year
+      bc_period_2019.start_on = Date.new(2019,1,1)
+      bc_period_2019.end_on = Date.new(2019,12,31)
 
       # if we need to change these dates after running this rake task in test or prod environments,
       # we should write a separate script.
       bc_period_2019.open_enrollment_start_on = Settings.aca.individual_market.open_enrollment.start_on
       bc_period_2019.open_enrollment_end_on = Settings.aca.individual_market.open_enrollment.end_on
 
-      bc_period_2019.slcsp = slcsp_2019.id
-      bc_period_2019.slcsp_id = slcsp_2019.id
+      # bc_period_2019.slcsp = slcsp_2019.id
+      # bc_period_2019.slcsp_id = slcsp_2019.id
 
       bs = hbx.benefit_sponsorship
       bs.benefit_coverage_periods << bc_period_2019
@@ -42,7 +42,7 @@ class Import2019IvlBenefitPackage < MongoidMigrationTask
 
     ivl_health_plans_2019         = Plan.individual_health_by_active_year(2019).health_metal_nin_catastropic.entries.collect(&:_id)
     ivl_dental_plans_2019         = Plan.individual_dental_by_active_year(2019).entries.collect(&:_id)
-    ivl_and_cat_health_plans_2019 = Plan.individual_health_by_active_year(2019).entries.collect(&:_id)
+    # ivl_and_cat_health_plans_2019 = Plan.individual_health_by_active_year(2019).entries.collect(&:_id)
 
     # shop_health_plans_2019        = Plan.shop_health_by_active_year(2019).entries.collect(&:_id)
     # shop_dental_plans_2019        = Plan.shop_dental_by_active_year(2019).entries.collect(&:_id)
@@ -84,22 +84,22 @@ class Import2019IvlBenefitPackage < MongoidMigrationTask
         )
     )
 
-    individual_catastrophic_health_benefit_package = BenefitPackage.new(
-      title: "catastrophic_health_benefits_2019",
-      elected_premium_credit_strategy: "unassisted",
-      benefit_ids:          ivl_and_cat_health_plans_2019,
-      benefit_eligibility_element_group: BenefitEligibilityElementGroup.new(
-        market_places:        ["individual"],
-        enrollment_periods:   ["open_enrollment", "special_enrollment"],
-        family_relationships: BenefitEligibilityElementGroup::INDIVIDUAL_MARKET_RELATIONSHIP_CATEGORY_KINDS,
-        benefit_categories:   ["health"],
-        incarceration_status: ["unincarcerated"],
-        age_range:            0..30,
-        citizenship_status:   ["us_citizen", "naturalized_citizen", "alien_lawfully_present", "lawful_permanent_resident"],
-        residency_status:     ["state_resident"],
-        ethnicity:            ["any"]
-      )
-    )
+    # individual_catastrophic_health_benefit_package = BenefitPackage.new(
+    #   title: "catastrophic_health_benefits_2019",
+    #   elected_premium_credit_strategy: "unassisted",
+    #   benefit_ids:          ivl_and_cat_health_plans_2019,
+    #   benefit_eligibility_element_group: BenefitEligibilityElementGroup.new(
+    #     market_places:        ["individual"],
+    #     enrollment_periods:   ["open_enrollment", "special_enrollment"],
+    #     family_relationships: BenefitEligibilityElementGroup::INDIVIDUAL_MARKET_RELATIONSHIP_CATEGORY_KINDS,
+    #     benefit_categories:   ["health"],
+    #     incarceration_status: ["unincarcerated"],
+    #     age_range:            0..30,
+    #     citizenship_status:   ["us_citizen", "naturalized_citizen", "alien_lawfully_present", "lawful_permanent_resident"],
+    #     residency_status:     ["state_resident"],
+    #     ethnicity:            ["any"]
+    #   )
+    # )
 
     native_american_health_benefit_package = BenefitPackage.new(
       title: "native_american_health_benefits_2019",
@@ -215,7 +215,7 @@ class Import2019IvlBenefitPackage < MongoidMigrationTask
     bc_period_2019.benefit_packages = [
         individual_health_benefit_package,
         individual_dental_benefit_package,
-        individual_catastrophic_health_benefit_package,
+        # individual_catastrophic_health_benefit_package,
         native_american_health_benefit_package,
         native_american_dental_benefit_package,
         individual_health_benefit_package_for_csr_100,

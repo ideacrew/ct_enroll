@@ -24,26 +24,26 @@ class QhpBuilder
 
   def search_carrier_name(file_path)
     file_path = file_path.downcase
-    carrier = if file_path.include?("aetna")
-      "Aetna"
-    elsif file_path.include?("dentegra")
-      "Dentegra"
-    elsif file_path.include?("delta")
-      "Delta Dental"
-    elsif file_path.include?("dominion")
-      "Dominion"
-    elsif file_path.include?("guardian")
-      "Guardian"
-    elsif file_path.include?("best life")
-      "BestLife"
-    elsif file_path.include?("metlife")
-      "MetLife"
-    elsif file_path.include?("united")
-      "UnitedHealthcare"
-    elsif file_path.include?("kaiser")
-      "Kaiser"
-    elsif file_path.include?("carefirst") || file_path.include?("cf")
-      "CareFirst"
+    carrier = if file_path.include?("anthem")
+      "Anthem BlueCross BlueShield"
+    elsif file_path.include?("connecticare")
+      "ConnectiCare"
+    # elsif file_path.include?("delta")
+    #   "Delta Dental"
+    # elsif file_path.include?("dominion")
+    #   "Dominion"
+    # elsif file_path.include?("guardian")
+    #   "Guardian"
+    # elsif file_path.include?("best life")
+    #   "BestLife"
+    # elsif file_path.include?("metlife")
+    #   "MetLife"
+    # elsif file_path.include?("united")
+    #   "UnitedHealthcare"
+    # elsif file_path.include?("kaiser")
+    #   "Kaiser"
+    # elsif file_path.include?("carefirst") || file_path.include?("cf")
+    #   "CareFirst"
     end
   end
 
@@ -191,6 +191,7 @@ class QhpBuilder
     @qhp.qhp_cost_share_variances.each do |cost_share_variance|
       if cost_share_variance.hios_plan_and_variant_id.split("-").last != "00"
         if cost_share_variance.plan_marketing_name[-2..-1] != "RE" # dont import plans ending with RE (Religious Exemption)
+          next if parse_market == "shop"
           csr_variant_id = parse_metal_level == "dental" ? "" : /#{cost_share_variance.hios_plan_and_variant_id.split('-').last}/
           plan = Plan.where(active_year: @plan_year,
             hios_id: /#{@qhp.standard_component_id.strip}/,
