@@ -93,7 +93,7 @@ class HbxProfile
     end
 
     def current_hbx
-      find_by_state_abbreviation("DC")
+      find_by_state_abbreviation("CT")
     end
 
     def transmit_group_xml(employer_profile_ids)

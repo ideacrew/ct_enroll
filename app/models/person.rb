@@ -635,7 +635,7 @@ class Person
     return true if no_dc_address == true && no_dc_address_reason.present?
 
     address_to_use = addresses.collect(&:kind).include?('home') ? 'home' : 'mailing'
-    addresses.each{|address| return true if address.kind == address_to_use && address.state == 'DC'}
+    addresses.each{|address| return true if address.kind == address_to_use && address.state == 'CT'}
     return false
   end
 
