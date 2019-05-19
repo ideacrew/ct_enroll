@@ -77,7 +77,7 @@ module Aws
     end
 
     def env_bucket_name(bucket_name)
-      "dchbx-enroll-#{bucket_name}-#{aws_env}"
+      "ic-enroll-#{bucket_name}-demo"
     end
 
     def setup
