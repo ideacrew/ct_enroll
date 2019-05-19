@@ -19,19 +19,23 @@ class Enrollments::IndividualMarket::OpenEnrollmentBegin
       @logger = Logger.new("#{Rails.root}/log/ivl_open_enrollment_begin_#{TimeKeeper.date_of_record.strftime('%Y_%m_%d')}.log")
     end
 
-    def process_renewals
+    def process_renewals(process_aqhp: true)
       @logger.info "Started process at #{Time.now.in_time_zone("Eastern Time (US & Canada)").strftime("%m-%d-%Y %H:%M")}"
 
       renewal_benefit_coverage_period = HbxProfile.current_hbx.benefit_sponsorship.renewal_benefit_coverage_period
+      @assisted_individuals = {}
 
-      aptc_reader = Enrollments::IndividualMarket::AssistedIvlAptcReader.new
-      aptc_reader.calender_year = renewal_benefit_coverage_period.start_on.year
-      aptc_reader.call
+      if process_aqhp
+        aptc_reader = Enrollments::IndividualMarket::AssistedIvlAptcReader.new
+        aptc_reader.calender_year = renewal_benefit_coverage_period.start_on.year
+        aptc_reader.call
 
-      @assisted_individuals = aptc_reader.assisted_individuals
-      puts "Found #{@assisted_individuals.keys.count} entries in Assisted sheet." unless Rails.env.test?
+        @assisted_individuals = aptc_reader.assisted_individuals
+        puts "Found #{@assisted_individuals.keys.count} entries in Assisted sheet." unless Rails.env.test?
 
-      process_aqhp_renewals(renewal_benefit_coverage_period)
+        process_aqhp_renewals(renewal_benefit_coverage_period)
+      end
+
       process_uqhp_renewals(renewal_benefit_coverage_period)
 
       @logger.info "Process ended at #{Time.now.in_time_zone("Eastern Time (US & Canada)").strftime("%m-%d-%Y %H:%M")}"

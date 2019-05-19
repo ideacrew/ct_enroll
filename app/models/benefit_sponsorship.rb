@@ -98,7 +98,7 @@ class BenefitSponsorship
       renewal_benefit_coverage_period = HbxProfile.current_hbx.benefit_sponsorship.renewal_benefit_coverage_period
       if renewal_benefit_coverage_period.present? && renewal_benefit_coverage_period.open_enrollment_start_on == new_date && !Rails.env.test?
         oe_begin = Enrollments::IndividualMarket::OpenEnrollmentBegin.new
-        oe_begin.process_renewals
+        oe_begin.process_renewals(process_aqhp: false)
       end
 
       # # Find families with events today and trigger their respective workflow states
