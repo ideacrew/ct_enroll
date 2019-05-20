@@ -40,7 +40,7 @@ class Import2020IvlBenefitPackage < MongoidMigrationTask
     # bc_period_2020 = hbx.benefit_sponsorship.benefit_coverage_periods.select { |bcp| bcp.start_on.year == 2020 }.first
     # bc_period_2020.second_lowest_cost_silver_plan = slcsp_2020
 
-    # ivl_health_plans_2020         = Plan.individual_health_by_active_year(2020).health_metal_nin_catastropic.entries.collect(&:_id)
+    ivl_health_plans_2020         = Plan.individual_health_by_active_year(2020).health_metal_nin_catastropic.entries.collect(&:_id)
     ivl_dental_plans_2020         = Plan.individual_dental_by_active_year(2020).entries.collect(&:_id)
     # ivl_and_cat_health_plans_2020 = Plan.individual_health_by_active_year(2020).entries.collect(&:_id)
 
