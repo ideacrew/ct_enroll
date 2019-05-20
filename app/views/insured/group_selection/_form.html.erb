@@ -94,18 +94,18 @@
               <h3><%= l10n("benefit_type") %></h3>
 
               <div class="n-radio-group">
-                <div class="n-radio-row">
+                <!-- <div class="n-radio-row">
                   <label class="n-radio" for="coverage_kind_health">
                     <%= radio_button_tag 'coverage_kind', 'health', is_coverage_kind_checked?("health"), disabled: is_coverage_kind_disabled?("health"),id: 'coverage_kind_health', class: 'n-radio' %>
                     <span class="n-radio">
                     </span>
                     <%= l10n(".health") %>
                   </label>
-                </div>
+                </div> -->
 
                 <div id="dental-radio-button" class="n-radio-row <%= 'dn' if can_shop_shop?(@person) && !@employee_role.is_dental_offered? %>">
                   <label class="n-radio" for="coverage_kind_dental">
-                    <%= radio_button_tag 'coverage_kind', 'dental', is_coverage_kind_checked?("dental"), disabled: is_coverage_kind_disabled?("dental"), id: 'coverage_kind_dental', class: 'n-radio' %>
+                    <%= radio_button_tag 'coverage_kind', 'dental', is_coverage_kind_checked?("dental"), disabled: is_coverage_kind_disabled?("dental"), checked: true, id: 'coverage_kind_dental', class: 'n-radio' %>
                     <span class="n-radio">
                     </span>
                     <%= l10n("dental") %>
