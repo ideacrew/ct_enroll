@@ -25,8 +25,8 @@ class Import2020IvlBenefitPackage < MongoidMigrationTask
 
       # if we need to change these dates after running this rake task in test or prod environments,
       # we should write a separate script.
-      bc_period_2020.open_enrollment_start_on = Settings.aca.individual_market.open_enrollment.start_on
-      bc_period_2020.open_enrollment_end_on = Settings.aca.individual_market.open_enrollment.end_on
+      bc_period_2020.open_enrollment_start_on = Date.new(2019,11,1)
+      bc_period_2020.open_enrollment_end_on = Date.new(2020,1,31)
 
       # bc_period_2020.slcsp = slcsp_2020.id
       # bc_period_2020.slcsp_id = slcsp_2020.id
