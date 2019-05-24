@@ -57,6 +57,7 @@ module Queries
       def each
         @source_enums.each do |agg|
           agg.each do |rec|
+            puts rec.inspect
             unless ["renewing_waived", "inactive", "void"].include?(rec["aasm_state"].to_s)
               if passes_cancel_event_test?(rec)
                 yield rec["hbx_enrollment_id"]
@@ -67,6 +68,7 @@ module Queries
       end
 
       def passes_cancel_event_test?(record)
+        puts record.inspect
         unless (record['aasm_state'].to_s == "coverage_canceled")
           return (!record['product_id'].blank?) # Waiver canceled/termed later
         end
@@ -237,7 +239,7 @@ module Queries
 
       benefit_sponsorships.flat_map do |bs|
         bs.benefit_applications.select do |ba|
-          (ba.start_on == effective_on) && ["active", "enrollment_eligible"].include?(ba.aasm_state.to_s)
+          (ba.start_on == effective_on) && ["active", "binder_paid", "enrollment_eligible"].include?(ba.aasm_state.to_s)
         end
       end.flat_map(&:benefit_packages).flat_map(&:sponsored_benefits)
     end
