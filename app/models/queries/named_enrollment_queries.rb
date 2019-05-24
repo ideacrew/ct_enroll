@@ -57,7 +57,6 @@ module Queries
       def each
         @source_enums.each do |agg|
           agg.each do |rec|
-            puts rec.inspect
             unless ["renewing_waived", "inactive", "void"].include?(rec["aasm_state"].to_s)
               if passes_cancel_event_test?(rec)
                 yield rec["hbx_enrollment_id"]
@@ -68,7 +67,6 @@ module Queries
       end
 
       def passes_cancel_event_test?(record)
-        puts record.inspect
         unless (record['aasm_state'].to_s == "coverage_canceled")
           return (!record['product_id'].blank?) # Waiver canceled/termed later
         end
